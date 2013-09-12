@@ -1,0 +1,64 @@
+//
+// Prefix header for all source files of the 'iAgent' target in the 'iAgent' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+typedef NS_ENUM(NSUInteger, MSPaneViewControllerType) {
+    MSPaneViewControllerTypeRed,
+    MSPaneViewControllerTypeBlue,
+    MSPaneViewControllerTypeMonospace,
+    MSPaneViewControllerTypeCount,
+};
+
+typedef NS_ENUM(NSUInteger, iAgentMenuType) {
+    iAgentMenuTypeSalesList,
+    iAgentMenuTypeNews,
+    iAgentMenuTypeCustomers,
+    iAgentMenuTypeSystemInfo,
+    ExamKingViewTypeCount,
+};
+
+#define db_extension @"sqlite"
+#define db_control @"control"
+#define db_data @"data"
+
+#define appID @"580771283"
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define system_version [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+
+#define kExamLicense @"license.key"
+#define kExamSubject @"subject.key"
+#define kExamSection @"section.key"
+
+#define kFontBold @"Helvetica-Bold"
+#define kFontCommon @"Helvetica"
+
+#define tableViewBgColor [UIColor colorWithRed:236/255.0 green:231/255.0 blue:203/255.0 alpha:0.8]
+#define oddCellBackgroundColor [UIColor colorWithRed:214.0f/255.0f green:214.0f/255.0f blue:236.0f/255.0f alpha:0.5]
+#define evenCellBackgroundColor [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:0.5]
+#define navigationBarColor [UIColor colorWithRed:192.0f/255.0f green:201.0f/255.0f blue:171.0f/205.0f alpha:0.5]
+#define navigationBarButtonColor [UIColor colorWithRed:170.0f/255.0f green:178.0f/255.0f blue:182.0f/255.0f alpha:0.5]
+#define toolBarColor [UIColor colorWithRed:192.0f/255.0f green:201.0f/255.0f blue:171.0f/205.0f alpha:0.5]
+#define toolBarButtonColor [UIColor colorWithRed:170.0f/255.0f green:178.0f/255.0f blue:182.0f/255.0f alpha:0.5]
+
+#define kSearchKeyWord @"searchKeyWord.key"
+#define kCompanyType @"companyType.key"
+#define kCompanyName @"companyName.key"
+#define kServiceArea @"serviceArea.key"
+#define kJobTitle @"jobTitle.key"
+#define kServicePeriod @"servicePeriod.key"
+#define kEducation @"education.key"
+#define kLicense @"license.key"
+#define kLocationInd @"locationInd.key"
+
+#define DESTORY(X) [X release], X = nil;
